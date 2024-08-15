@@ -1,0 +1,163 @@
+:root { 
+    --Pale-blue: hsl(225, 100%, 94%);
+    --Bright-blue: hsl(245, 75%, 52%);
+    --Very-pale-blue: hsl(228, 100%, 93%, 40%);
+    --Desaturated-blue: hsl(224, 23%, 55%);
+    --Dark-blue: hsl(223, 47%, 23%);
+}
+
+* {
+  margin: 0; 
+  padding:0;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(./images/pattern-background-mobile.svg);
+  background-color: var(--Pale-blue);
+  background-repeat: no-repeat;
+  display: grid;
+  place-content: center;
+  background-size: contain;
+  min-height: 100vh;
+  font-family: "Red Hat Display";
+  font-size: 1rem;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeSpeed;
+  -moz-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+article {
+  display: block;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  width: auto;
+  object-fit: fill;
+}
+
+.container {
+  display: grid;
+  grid-template-rows: 0.1fr 1fr  0.1fr;
+  place-content: center;
+  max-width: 20rem;
+}
+
+.card {
+  grid-row: 2;
+  background-color: white;
+  text-align: center;
+  justify-self: center;
+  align-self: center; 
+  border-radius: 1rem; 
+  overflow: hidden;
+  box-shadow: 0 10px 15px hsl(209, 43%, 80%);
+}
+
+.details {
+  padding: 1.5rem;  
+  display: grid;
+  gap: 1.5rem;
+}
+
+.description {
+  display: grid;
+  gap: 1rem;
+}
+.description h2 {
+  overflow-wrap: break-word;
+  font-weight: 700;
+  color: var(--Dark-blue);
+}
+
+.description p {
+  overflow-wrap: break-word;
+  padding: 0.5rem;
+  font-weight: 500;
+  color: var(--Desaturated-blue);
+}
+
+.order-info {
+  background-color: var(--Very-pale-blue);
+  padding: 0.8rem;
+  display: grid;
+  grid-template-columns: 0.6fr 1fr 1fr;
+  align-items: center;
+  border-radius: 0.5rem;
+}
+
+.order-info img {
+    justify-content: left;
+}
+
+.order-info div {
+  justify-self: left;
+}
+
+.order-info span {
+  font-size: smaller;
+  font-weight: bold;
+}
+
+.order-info p {
+  font-size: smaller;
+  font-weight: 500;
+  color: var(--Desaturated-blue);
+}
+
+a {
+  justify-self: end;
+  color: var(--Bright-blue);
+  font-weight: 500;
+  font-size: smaller;
+}
+
+a:active {
+  text-decoration: none;
+}
+
+.buttons {
+  font: inherit;
+  display: grid;
+  gap: 1rem;
+}
+
+button {
+  border: none;
+  padding: 1rem;
+  border-radius: 0.8rem;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.proceed {
+  background-color: var(--Bright-blue);
+  color: white;
+  font-size: 1rem;
+  font-weight: 700;
+  box-shadow: 0 10px 15px hsl(209, 43%, 80%);
+}
+
+.proceed:active {
+  background-color: hsla(245, 75%, 52%, 0.76);
+}
+
+.cancel {
+  background-color: var(--Very-pale-blue);
+  color: var(--Desaturated-blue);
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.cancel:active {
+  color: var(--Dark-blue);
+}
